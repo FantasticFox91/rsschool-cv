@@ -1,1 +1,1 @@
-# rsschool-cv
+https://FantasticFox91.github.io/rsschool-cv/cv
