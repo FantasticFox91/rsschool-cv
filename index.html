@@ -16,16 +16,16 @@
             <a href="#" class="header__link">About</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Skills</a>
+            <a href="#skills" class="header__link">Skills</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Code</a>
+            <a href="#code" class="header__link">Code</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Projects</a>
+            <a href="#projects" class="header__link">Projects</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link">Contacts</a>
+            <a href="#contacts" class="header__link">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -40,7 +40,7 @@
         <p class="full-name">Grygorii Lysytsia</p>
         <p class="specialization">Junior Frontend developer</p>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <h2 class="heading">Contacts</h2>
           <ul class="contacts__list list">
@@ -62,7 +62,7 @@
           </ul>
         </div>
       </section>
-      <section class="skills">
+      <section class="skills" id="skills">
         <div class="container">
           <h2 class="heading">Skills</h2>
           <ul class="skills__list list">
@@ -100,7 +100,7 @@
           <h2 class="heading">Profile</h2>
           <p class="about__text">I am frontend developer on the begining of my education so much learned and so much still need to be learned. Today I know more that I have known yesterday. I have completed Dark Souls, Dark Souls 2, Dark Souls 3, Bloodborne, Sekiro Shadow die twice games do I need tell you more about my perseverance. My life motto is “Sky's the limit”.</p>
         </section>
-        <section class="expirience">
+        <section class="expirience" id="projects">
           <h2 class="heading">Expirience</h2>
           <ul class="expirience__list list">
             <li class="expirience__item">
@@ -183,6 +183,40 @@
             </li>
           </ul>
         </section>
+        <section class="example" id="code">
+          <h2 class="heading">Code example</h2>
+          <p>A man has a rather old car being worth $2000. He saw a secondhand car being worth $8000. He wants to keep his old car until he can buy the secondhand one.</p> 
+          <p>He thinks he can save $1000 each month but the prices of h old car and of the new one decrease of 1.5 percent per month. Furthermore this percent of loss increases of 0.5 percent at the end of every two months. Our man finds it difficult to makeis all these calculations.</p>
+          <p>Can you help him? How many months will it take him to save up enough money to buy the car he wants, and how much money will he have left over?</p>
+          <code>
+            <pre>function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth){
+  let oldCarPrice = startPriceOld;
+  let newCarPrice = startPriceNew;
+  let percent = percentLossByMonth;
+  let savedMoney = 0;
+  if(startPriceOld >= startPriceNew){
+    return [0,startPriceOld - startPriceNew]
+  }else{
+    for(let i = 1; startPriceOld <= startPriceNew; i++){
+      if(savedMoney >= newCarPrice){
+      return [i-1,Math.round(savedMoney-newCarPrice)]
+      }else if(i % 2 === 0){
+        percent += 0.5
+        oldCarPrice = oldCarPrice - (oldCarPrice*(percent/100));
+        newCarPrice = newCarPrice - (newCarPrice*(percent/100));
+        savedMoney = oldCarPrice + (savingperMonth*i) 
+      }else{
+        oldCarPrice = oldCarPrice - (oldCarPrice*(percent/100));
+        newCarPrice = newCarPrice - (newCarPrice*(percent/100));
+        savedMoney = oldCarPrice + (savingperMonth*i) 
+      }
+    }
+  }
+}
+</pre>
+          </code>
+          <img class="code__example" src="img/code.jpg" alt="Пример кода" width="260">
+        </section>
         <section class="education">
           <h2 class="heading">Education</h2>
           <ul class="education__list list">
@@ -220,12 +254,12 @@
     <footer class="footer">
       <ul class="footer__list list">
         <li class="footer__item">
-          <a href="https://github.com/FantasticFox91" class="footer__link">
+          <a href="https://github.com/FantasticFox91" class="footer__link" target="_blank">
             <img src="img/github-icon.svg" alt="Ссылка на мой github." width="40" height="50">
           </a>
         </li>
         <li class="footer__item">
-          <a href="https://rs.school/js/" class="footer__link">
+          <a href="https://rs.school/js/" class="footer__link" target="_blank">
             <img src="img/rs_school_js.svg" alt="Сылка на страницу круса RS School" width="100" height="50">
           </a>
         </li>
