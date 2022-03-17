@@ -10,7 +10,8 @@ Last name: **Lysytsia**
 
 - E-mail: **grygorii_lysytsia@hotmail.com**
 
-- Telegramm: **@FantasticFox00**
+- Telegramm: **@FantasticFox007**
+  
 - Facebook: **https://www.facebook.com/grigoriy.lisitsa**
 ---
 ## About me
